@@ -1,0 +1,24 @@
+{
+  "name": "greenlight",
+  "version": "0.1.0",
+  "description": "Progressive Web App that aims to make tracking of deployments easy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EdgeJay/greenlight.git"
+  },
+  "keywords": [
+    "pwa",
+    "vue",
+    "js"
+  ],
+  "author": "Wu Huijie",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EdgeJay/greenlight/issues"
+  },
+  "homepage": "https://github.com/EdgeJay/greenlight#readme"
+}
