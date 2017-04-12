@@ -4,6 +4,7 @@
   "description": "Progressive Web App that aims to make tracking of deployments easy",
   "main": "index.js",
   "scripts": {
+    "dev-run": "python -m SimpleHTTPServer 9090",
     "dev-build": "./node_modules/.bin/webpack --config ./config/webpack.dev.js",
     "dev-server": "./node_modules/.bin/webpack-dev-server --config ./config/webpack.dev.js --port 9191",
     "test": "echo \"Error: no test specified\" && exit 1"
