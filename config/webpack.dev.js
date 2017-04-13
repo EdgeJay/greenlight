@@ -13,6 +13,30 @@ module.exports = {
   },
   module: {
     rules: [{
+      test: /\.(js|vue)$/,
+      loader: 'eslint-loader',
+      enforce: 'pre',
+      include: [path.resolve(__dirname, '../src'), path.resolve(__dirname, '../test')],
+      options: {
+        formatter: require('eslint-friendly-formatter')
+      }
+    }, {
+      test: /\.vue$/,
+      loader: 'vue-loader',
+      options: {
+        loaders: {
+          css: {
+            loader: 'css-loader',
+            options: {
+              minimize: false,
+              sourceMap: false
+            }
+          },
+          'scss': 'vue-style-loader!css-loader!sass-loader',
+          'sass': 'vue-style-loader!css-loader!sass-loader?indentedSyntax'
+        }
+      }
+    }, {
       test: /\.js$/,
       exclude: /(node_modules|bower_components)/,
       use: {
