@@ -51,6 +51,11 @@ module.exports = {
       name: 'vendor'
     })
   ],
+  resolve: {
+    alias: {
+      vue: 'vue/dist/vue.js'
+    }
+  },
   devServer: {
     contentBase: [path.resolve(__dirname, '../public'), path.resolve(__dirname, '../resources')]
   }
