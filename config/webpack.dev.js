@@ -3,7 +3,7 @@ const webpack = require('webpack'),
 
 module.exports = {
   entry: {
-    bundle: './index.js',
+    bundle: './client.js',
     vendor: ['vue', 'vue-router', 'vuex']
   },
   output: {
