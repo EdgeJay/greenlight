@@ -4,7 +4,7 @@
       <span class="mdl-layout-title">Greenlight</span>
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation">
-        <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect">
+        <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" v-if="canEdit">
           <i class="material-icons">add</i>
         </button>
       </nav>
@@ -14,6 +14,11 @@
 
 <script>
 export default {
+  computed: {
+    canEdit() {
+      return this.$store.state.loggedIn;
+    },
+  },
   data() {
     return {
     };
