@@ -24,6 +24,9 @@
     "url": "https://github.com/EdgeJay/greenlight/issues"
   },
   "homepage": "https://github.com/EdgeJay/greenlight#readme",
+  "engines": {
+    "node": "7.2.0"
+  },
   "devDependencies": {
     "babel-core": "^6.24.1",
     "babel-eslint": "^7.2.2",
