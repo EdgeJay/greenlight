@@ -44,7 +44,7 @@ module.exports = {
       }
     }]
   },
-  devtool: 'source-map',
+  devtool: '#eval-source-map',
   target: 'web',
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({
@@ -53,7 +53,7 @@ module.exports = {
   ],
   resolve: {
     alias: {
-      vue: 'vue/dist/vue.js'
+      vue$: 'vue/dist/vue.js'
     }
   },
   devServer: {
