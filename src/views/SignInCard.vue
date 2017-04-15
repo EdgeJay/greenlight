@@ -8,7 +8,7 @@
       Please sign in to continue
     </div>
     <div class="mdl-card__actions mdl-card--border">
-      <a href="" class="mdl-button mdl-button--colored mdl-button--raised mdl-js-button mdl-js-ripple-effect">Sign In</a>
+      <router-link to="/signin" class="mdl-button mdl-button--colored mdl-button--raised mdl-js-button mdl-js-ripple-effect">Sign In</router-link>
     </div>
   </div>
 </template>
