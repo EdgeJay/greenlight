@@ -2,7 +2,7 @@
   <div class="mdl-layout__drawer">
     <span class="mdl-layout-title">
       <p>Welcome back</p>
-      <span>John Smith</span>
+      <span>{{ displayName }}</span>
     </span>
     <nav class="mdl-navigation">
       <a class="mdl-navigation__link" href="">Sign out</a>
@@ -12,6 +12,7 @@
 
 <script>
 export default {
+  props: ['displayName'],
   data() {
     return {
 
