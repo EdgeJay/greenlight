@@ -6,7 +6,7 @@
   "scripts": {
     "eslint": "./node_modules/.bin/eslint --config ./.eslintrc.js ./server/*",
     "start": "node server.js",
-    "dev:run": "python -m SimpleHTTPServer 9090",
+    "dev:run": "nodemon -L",
     "dev:build": "./node_modules/.bin/webpack --config ./config/webpack.dev.js",
     "dev:server": "./node_modules/.bin/webpack-dev-server --config ./config/webpack.dev.js --port 9191",
     "deploy:heroku": "./scripts/heroku.sh",
