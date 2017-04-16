@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "dev-run": "python -m SimpleHTTPServer 9090",
-    "dev-build": "./node_modules/.bin/webpack --config ./config/webpack.dev.js",
-    "dev-server": "./node_modules/.bin/webpack-dev-server --config ./config/webpack.dev.js --port 9191",
+    "dev:run": "python -m SimpleHTTPServer 9090",
+    "dev:build": "./node_modules/.bin/webpack --config ./config/webpack.dev.js",
+    "dev:server": "./node_modules/.bin/webpack-dev-server --config ./config/webpack.dev.js --port 9191",
+    "deploy:heroku": "./scripts/heroku.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
