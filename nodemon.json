@@ -1,3 +1,7 @@
 {
-  "ignore": ["node_modules/*", "bower_components/*", "config/*", "public/*", "resources/*", "scripts/*", "src/*"]
+  "ignore": ["node_modules/*", "bower_components/*", "config/*", "public/*", "resources/*", "scripts/*", "src/*"],
+  "execMap": {
+    "js": "npm run eslint && node"
+  },
+  "ext": "js json"
 }
