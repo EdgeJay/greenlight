@@ -4,7 +4,7 @@
   "description": "Progressive Web App that aims to make tracking of deployments easy",
   "main": "./server/index.js",
   "scripts": {
-    "eslint": "./node_modules/.bin/eslint --config .eslintrc.js",
+    "eslint": "./node_modules/.bin/eslint --config ./.eslintrc.js ./server/*",
     "start": "node server.js",
     "dev:run": "python -m SimpleHTTPServer 9090",
     "dev:build": "./node_modules/.bin/webpack --config ./config/webpack.dev.js",
@@ -52,7 +52,11 @@
   },
   "dependencies": {
     "dotenv": "^4.0.0",
+    "dustjs-linkedin": "^2.7.5",
     "koa": "^2.2.0",
+    "koa-router": "^7.1.1",
+    "koa-static": "^3.0.0",
+    "koa-views": "^6.0.1",
     "vue": "^2.2.6",
     "vue-router": "^2.4.0",
     "vuex": "^2.2.1"

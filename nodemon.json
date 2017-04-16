@@ -1,5 +1,17 @@
 {
-  "ignore": ["node_modules/*", "bower_components/*", "config/*", "public/*", "resources/*", "scripts/*", "src/*"],
+  "verbose": true,
+  "ignore": [
+    "node_modules/*",
+    "bower_components/*",
+    "client/*",
+    "config/*",
+    "public/*",
+    "resources/*",
+    "scripts/*"
+  ],
+  "watch": [
+    "server/*"
+  ],
   "execMap": {
     "js": "npm run eslint && node"
   },

@@ -3,7 +3,7 @@ const webpack = require('webpack'),
 
 module.exports = {
   entry: {
-    bundle: './client.js',
+    bundle: './client/index.js',
     vendor: ['vue', 'vue-router', 'vuex']
   },
   output: {
@@ -16,7 +16,7 @@ module.exports = {
       test: /\.(js|vue)$/,
       loader: 'eslint-loader',
       enforce: 'pre',
-      include: [path.resolve(__dirname, '../src'), path.resolve(__dirname, '../test')],
+      include: [path.resolve(__dirname, '../client'), path.resolve(__dirname, '../test')],
       options: {
         formatter: require('eslint-friendly-formatter')
       }
@@ -57,6 +57,6 @@ module.exports = {
     }
   },
   devServer: {
-    contentBase: [path.resolve(__dirname, '../public'), path.resolve(__dirname, '../resources')]
+    contentBase: [path.resolve(__dirname, '../public')]
   }
 };
