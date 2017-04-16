@@ -1,6 +1,8 @@
-const webpack = require('webpack');
-
 const path = require('path');
+
+require('dotenv').load({ path: path.resolve(__dirname, '../deploy/production/dotenv') });
+
+const webpack = require('webpack');
 
 module.exports = {
   entry: {
@@ -9,7 +11,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, '../public/assets/js'),
-    filename: '[name].js',
+    filename: '[name].min.js',
     publicPath: '/assets/js/'
   },
   module: {
@@ -29,7 +31,7 @@ module.exports = {
           css: {
             loader: 'css-loader',
             options: {
-              minimize: false,
+              minimize: true,
               sourceMap: false
             }
           },
@@ -45,19 +47,21 @@ module.exports = {
       }
     }]
   },
-  devtool: '#eval-source-map',
   target: 'web',
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor'
-    })
+    }),
+    new webpack.EnvironmentPlugin(['NODE_ENV']),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false
+      },
+    }),
   ],
   resolve: {
     alias: {
       vue$: 'vue/dist/vue.js'
     }
   },
-  devServer: {
-    contentBase: [path.resolve(__dirname, '../public')]
-  }
 };

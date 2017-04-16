@@ -18,6 +18,7 @@ const router = new Router();
 /* Set global state */
 app.use(async (ctx, next) => {
   ctx.state.assetServer = process.env.NODE_ENV === 'production' ? '' : '//localhost:9191';
+  ctx.state.jsAssetSuffix = process.env.NODE_ENV === 'production' ? '.min.js' : '.js';
   await next();
 });
 
