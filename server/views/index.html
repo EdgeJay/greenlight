@@ -1,1 +1,9 @@
 {> "server/views/layouts/default.html" /}
+
+{< content}
+<div id="app-mount">
+  <router-view></router-view>
+</div>
+<script src="{assetServer}/assets/js/vendor.js"></script>
+<script src="{assetServer}/assets/js/bundle.js"></script>
+{/content}
