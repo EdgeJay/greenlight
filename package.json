@@ -11,6 +11,7 @@
     "dev:server": "./node_modules/.bin/webpack-dev-server --config ./config/webpack.dev.js --port 9191",
     "deploy:heroku": "./scripts/heroku.sh",
     "preinstall": "chmod +x ./scripts/preinstall.sh && ./scripts/preinstall.sh",
+    "postinstall": "chmod +x ./scripts/postinstall.sh && ./scripts/postinstall.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
