@@ -1,7 +1,5 @@
 const path = require('path');
 
-require('dotenv').load({ path: path.resolve(__dirname, '../deploy/production/dotenv') });
-
 const webpack = require('webpack');
 
 module.exports = {
@@ -52,7 +50,11 @@ module.exports = {
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor'
     }),
-    new webpack.EnvironmentPlugin(['NODE_ENV']),
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: '"production"'
+      }
+    }),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
         warnings: false
