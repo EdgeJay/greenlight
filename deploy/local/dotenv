@@ -1,0 +1,5 @@
+NODE_ENV=development
+PORT=9090
+
+# Uncomment this to debug koa and its middlewares
+# DEBUG=koa*
