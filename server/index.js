@@ -26,6 +26,7 @@ app.use(serve(path.resolve(__dirname, '../resources')));
 
 /* Template rendering using dustjs */
 app.use(views(path.resolve(__dirname, 'views'), {
+  cache: process.env.NODE_ENV === 'production',
   map: {
     html: 'dust',
   },
