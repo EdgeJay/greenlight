@@ -3,6 +3,10 @@
 
 @import "{{ site.theme }}";
 
+blockquote {
+  font-size: 15px;
+}
+
 header .inner.links {
   margin-top: 20px;
   
