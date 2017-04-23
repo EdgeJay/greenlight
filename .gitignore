@@ -4,3 +4,9 @@ npm-debug.log
 dist
 public
 /*.env
+
+# For Github pages
+_site
+.sass-cache
+Gemfile.lock
+*.gem
