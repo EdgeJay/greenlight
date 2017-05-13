@@ -20,10 +20,10 @@ if (process.env.NODE_ENV === 'development') {
     publicPath: '/assets/js/',
   }));
   app.use(hotMiddleware(compiler));
-} else if (process.env.NODE_ENV === 'production') {
-  app.use(serve(path.resolve(__dirname, '../public')));
-  app.use(serve(path.resolve(__dirname, '../resources')));
 }
+
+app.use(serve(path.resolve(__dirname, '../public')));
+app.use(serve(path.resolve(__dirname, '../resources')));
 
 /* Set global state */
 app.use(async (ctx, next) => {
