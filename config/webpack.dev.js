@@ -4,7 +4,7 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    bundle: './client/index.js',
+    bundle: ['./client/devClient.js', './client/index.js'],
     vendor: ['vue', 'vue-router', 'vuex']
   },
   output: {
@@ -50,7 +50,8 @@ module.exports = {
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor'
-    })
+    }),
+    new webpack.HotModuleReplacementPlugin(),
   ],
   resolve: {
     alias: {
