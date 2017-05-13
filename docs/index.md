@@ -22,5 +22,5 @@ About several weeks before I started working on this project I was introduced by
 - [x] Pick choice of front-end library
 - [x] Pick choice of app state management library
 - [x] Pick choice of app routing library 
-- [ ] Enable hot module reloading
+- [x] Enable hot module replacement
 - [ ] Enable server-side rendering
