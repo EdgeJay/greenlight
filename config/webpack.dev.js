@@ -59,6 +59,6 @@ module.exports = {
     }
   },
   devServer: {
-    contentBase: [path.resolve(__dirname, '../public')]
+    contentBase: [path.resolve(__dirname, '../public'), path.resolve(__dirname, '../resources')]
   }
 };
